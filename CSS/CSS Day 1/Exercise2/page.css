@@ -1,0 +1,14 @@
+/* universal selector*/
+*{
+    font-family: Arial, sans-serif;
+}
+/* Type selector*/
+h1{
+    color: red;
+}
+.highlight{
+    background: yellow;
+}
+#money{
+    font-size: 24px;
+}

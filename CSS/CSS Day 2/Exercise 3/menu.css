@@ -1,0 +1,71 @@
+/* Global styling for better appearance */
+body {
+    font-family: cursive;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* 1) Vertical menu: block links with stylish look */
+.vertical a {
+    display: block;
+    padding: 12px 40px;
+    margin-bottom: 2px;
+    background-color: black;
+    color: red;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.vertical a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* 2) Horizontal menu: inline-block links with spacing and hover effect */
+.horizontal a {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-right: 15px;
+    background-color: #ffffff;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+.horizontal a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* 3) Stylish header and login button positioning */
+header {
+    position: relative;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.login-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ffc107;
+    color: #333;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: cell;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: black;
+}

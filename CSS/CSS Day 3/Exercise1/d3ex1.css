@@ -1,0 +1,110 @@
+:root {
+  --color-surface: #ffffff;
+  --color-text: #333;
+  --color-accent: #4f46e5;
+  
+  --spacing: 1rem;
+  
+  --radius: 8px;
+  
+  --z-header: 100;
+  --z-subheader: 90;
+}
+.app{
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar content";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 100vh;
+}
+.app_header{
+    grid-row: header;
+    background-color: var(--color-accent);
+    color: white;
+    padding: var(--spacing);
+}
+.app_sidebar{
+    grid-area: sidebar;
+    background-color: var(--color-surface);
+    padding: var(--spacing);
+}
+.app__content {
+  grid-area: content;
+  background-color: var(--color-surface);
+  padding: var(--spacing);
+}
+@media (max-width: 1023px) {
+  .app {
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .app {
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content";
+  }
+  .app__sidebar {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+  padding: var(--spacing);
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+.subheader {
+  position: sticky;
+  top: 64px;
+  background: var(--color-surface);
+  z-index: var(--z-subheader);
+  padding: var(--spacing);
+}
+.theme-dark {
+  --color-surface: #1f2937;
+  --color-text: #f3f4f6;
+}
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+}
+body {
+  overflow-x: hidden;
+}
+
